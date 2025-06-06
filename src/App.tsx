@@ -78,7 +78,7 @@ export const App: React.FC = () => {
                 <Loader />
               ) : (
                 <TodoList
-                  toDoes={getFilteredTodos()}
+                  todos={getFilteredTodos()}
                   onTodoClick={handleTodoClick}
                   selectedTodo={selectedTodo}
                 />

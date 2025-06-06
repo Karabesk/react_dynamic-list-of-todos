@@ -2,13 +2,13 @@ import React from 'react';
 import { Todo } from '../../types/Todo';
 
 interface TodoListProps {
-  toDoes: Todo[];
+  todos: Todo[];
   onTodoClick: (todo: Todo) => void;
   selectedTodo?: Todo | null; // Uncomment if you want to use selectedTodo
 }
 
 export const TodoList: React.FC<TodoListProps> = ({
-  toDoes,
+  todos,
   onTodoClick,
   selectedTodo,
 }) => {
@@ -28,7 +28,7 @@ export const TodoList: React.FC<TodoListProps> = ({
       </thead>
 
       <tbody>
-        {toDoes.map(todo => (
+        {todos.map(todo => (
           <tr data-cy="todo" key={todo.id} className="">
             <td className="is-vcentered">{todo.id}</td>
             <td className="is-vcentered">
